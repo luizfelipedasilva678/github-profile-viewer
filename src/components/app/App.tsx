@@ -1,22 +1,17 @@
 import React from 'react';
+import AppContainer from './style';
+import { UserContextProvider } from '../../context/user-context';
+import ProfileBox from '../profile-box/ProfileBox';
+import SearchBar from '../search-bar/SearchBar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <UserContextProvider>
+        <SearchBar />
+        <ProfileBox />
+      </UserContextProvider>
+    </AppContainer>
   );
 }
 
