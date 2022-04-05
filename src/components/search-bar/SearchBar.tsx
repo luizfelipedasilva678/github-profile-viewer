@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import UserContext from '../../context/user-context';
 import getUser from '../../utils/get-user';
+import { BtnSearchBar, FormSearchBar, InputSearchBar } from './style';
 
 function SearchBar() {
   const [userName, setUserName] = useState<string>('');
@@ -17,12 +18,10 @@ function SearchBar() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" />
-        <input type="submit" value="Pesquisar" />
-      </form>
-    </div>
+    <FormSearchBar onSubmit={handleSubmit}>
+      <InputSearchBar type="text" />
+      <BtnSearchBar type="submit"> Pesquisar </BtnSearchBar>
+    </FormSearchBar>
   );
 }
 

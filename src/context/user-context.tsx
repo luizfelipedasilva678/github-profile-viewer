@@ -5,7 +5,7 @@ const DEFAULT_VALUE = {
   state: {
     avatar_url: '',
     bio: '',
-    name: '',
+    login: '',
     location: '',
     html_url: '',
   },
