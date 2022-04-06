@@ -14,7 +14,7 @@ const DEFAULT_VALUE = {
 
 const UserContext = createContext<UserContextProps>(DEFAULT_VALUE);
 
-interface UserContextProviderProps {
+export interface UserContextProviderProps {
   children: React.ReactNode;
 }
 
